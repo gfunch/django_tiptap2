@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class TiptapConfig(AppConfig):
-    name = "django_tiptap"
+    name = "django_tiptap2"

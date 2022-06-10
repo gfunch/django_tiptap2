@@ -8,7 +8,7 @@ from .config import TIPTAP_DEFAULT_CONFIG, getUpdatedContextForProperty
 
 class TipTapWidget(forms.Textarea):
     class Media:
-        css = {"all": ("django_tiptap/css/styles.css",)}
+        css = {"all": ("django_tiptap2/css/styles.css",)}
 
     template_name = "forms/tiptap_textarea.html"
 
@@ -21,7 +21,7 @@ class TipTapWidget(forms.Textarea):
         # Take default config and update it with the user config from settings.py.
 
         config = config.copy() if config else TIPTAP_DEFAULT_CONFIG.copy()
-        django_settings_config = getattr(settings, "DJANGO_TIPTAP_CONFIG", {})
+        django_settings_config = getattr(settings, "DJANGO_TIPTAP2_CONFIG", {})
         config.update(django_settings_config)
 
         return config
