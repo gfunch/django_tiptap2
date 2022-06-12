@@ -133,3 +133,9 @@ dmypy.json
 
 # macos
 .DS_Store
+
+#editor-related
+.history
+
+# django
+staticfiles

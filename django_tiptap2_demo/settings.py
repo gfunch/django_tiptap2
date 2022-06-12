@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django_tiptap",
-    "django_tiptap_demo.demo_app",
+    "django_tiptap2",
+    "django_tiptap2_demo.demo_app",
 ]
 
 MIDDLEWARE = [
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "django_tiptap_demo.urls"
+ROOT_URLCONF = "django_tiptap2_demo.urls"
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "django_tiptap_demo.wsgi.application"
+WSGI_APPLICATION = "django_tiptap2_demo.wsgi.application"
 
 
 # Database
@@ -112,8 +112,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = "/static/"
+STATIC_ROOT = str(BASE_DIR / "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -128,34 +128,18 @@ DJANGO_TIPTAP_CONFIG = {
         "bold",
         "italic",
         "underline",
-        "strikethrough",
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6",
-        "textAlign",
-        "indent",
-        "table",
-        "bulletList",
-        "orderedList",
-        "typography",
-        "clearFormat",
-        "jinjaSyntaxHighlight",
-        "hardBreak",
     ],
     "placeholderText": "Begin typing here...",  # set None to skip display
     "unsavedChangesWarningText": "You have unsaved changes!",  # set None to skip display
     "lang": "EN",
-    "custom_extensions": [
-        {
-            "source_static": "my_custom_extension/my_custom_extension.js",
-            "module_name": "MyCustomExtension",
-            "toolbar_include": "my_custom_extension/my_custom_extension_toolbar_include.html",
-            "buttonsconfig_include": "my_custom_extension/my_custom_extension_button_config.js",
-            "css_include": "my_custom_extension/my_custom_extension.css",
-        }
-    ],
+    # "custom_extensions": [
+    #     {
+    #         "source_static": "my_custom_extension/my_custom_extension.js",
+    #         "module_name": "MyCustomExtension",
+    #         "toolbar_include": "my_custom_extension/my_custom_extension_toolbar_include.html",
+    #         "buttonsconfig_include": "my_custom_extension/my_custom_extension_button_config.js",
+    #         "css_include": "my_custom_extension/my_custom_extension.css",
+    #     }
+    # ],
     "tiptapOutputFormat": "html",
 }

@@ -152,14 +152,14 @@ DJANGO_TIPTAP_CONFIG = {
 You can specify custom tiptap extensions that should be loaded using the `custom_extensions` config list.
 This list contains dictionaries with the following options:
 
-* `source_static` or `source_url`: where to load the extension from (**mandatory**)
-* `module_name` the name of the extension (**mandatory**)
-* `configuration_statement` how to configure the extension. Defaults to the `module_name` if not set
-* `toolbar_include` path of a html-template to include into the toolbar
-* `buttonsconfig_include` path of a js-template to include into the tiptap buttonsconfig
-* `css_include` path of a css-template to include into the textarea
+- `source_static` or `source_url`: where to load the extension from (**mandatory**)
+- `module_name` the name of the extension (**mandatory**)
+- `configuration_statement` how to configure the extension. Defaults to the `module_name` if not set
+- `toolbar_include` path of a html-template to include into the toolbar
+- `buttonsconfig_include` path of a js-template to include into the tiptap buttonsconfig
+- `css_include` path of a css-template to include into the textarea
 
-`django_tiptap_demo` contains an example of a custom extension
+`django_tiptap2_demo` contains an example of a custom extension
 
 # Contributing
 
@@ -177,7 +177,7 @@ welcome to!
     ```
 
 2.  For development purposes it is encouraged to add the `django_tiptap` and
-    `django_tiptap_demo` modules to your PythonPath. You can either configure this via
+    `django_tiptap2_demo` modules to your PythonPath. You can either configure this via
     your shell of choice or through your IDE.
     VSCode users can use the following setting to automatically add the current workspace
     to the PythonPath. If you're an OSX/MacOS user, replace `env.linux` with `env.osx`.
